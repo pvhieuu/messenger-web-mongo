@@ -1,4 +1,4 @@
-export const url = 'http://localhost:4000'
+export const url = 'https://messenger-server-mongo.herokuapp.com'
 
 export const contentType = () => ({
   'Content-Type': 'application/json',
