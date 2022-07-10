@@ -1,0 +1,21 @@
+.Dashboard {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  > .sidebar {
+    display: flex;
+    flex-direction: column;
+    width: 360px;
+    border-right: 1px solid rgba($color: #000000, $alpha: 0.1);
+  }
+  > .main {
+    flex: 1;
+    display: flex;
+    width: 100%;
+    > .chat {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

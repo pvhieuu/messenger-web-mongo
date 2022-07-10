@@ -1,0 +1,59 @@
+.HeaderAuth {
+  background-color: #fff;
+  border-bottom: 1px solid transparent;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  transition: all 0.2s linear;
+  width: 100%;
+  z-index: 1;
+  > .containerHeader {
+    align-items: center;
+    display: flex;
+    height: 100px;
+    justify-content: space-between;
+    width: 1195px;
+    > img {
+      height: 40px;
+      transition: all 0.1s linear;
+      width: 40px;
+      &:hover {
+        cursor: pointer;
+        opacity: 0.8;
+      }
+    }
+    > ul {
+      align-items: center;
+      display: flex;
+      > li {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 28px;
+        margin-left: 30px;
+        position: relative;
+        &:hover {
+          cursor: pointer;
+          &::after {
+            background-color: var(--main-color);
+          }
+        }
+        &::after {
+          background-color: transparent;
+          border-radius: 2px;
+          bottom: 0;
+          content: '';
+          height: 3px;
+          left: 0;
+          position: absolute;
+          transition: all 0.05s linear;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.HeaderAuth.border {
+  border-color: rgba(0, 0, 0, 0.1);
+}

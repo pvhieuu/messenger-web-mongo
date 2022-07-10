@@ -1,0 +1,127 @@
+.HeaderChat {
+  width: 100%;
+  height: 56px;
+  border-bottom: 1px solid rgba($color: #000000, $alpha: 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12px;
+  > .left {
+    display: flex;
+    align-items: center;
+    > .containerAvatar {
+      > img {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        border: 1px solid rgba($color: #000000, $alpha: 0.3);
+        margin-right: 12px;
+      }
+    }
+    > .containerAvatar.online {
+      position: relative;
+      &::before {
+        position: absolute;
+        top: 24px;
+        left: 26px;
+        content: '';
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #28a745;
+        border: 1px solid white;
+      }
+    }
+    > .containerName {
+      > p {
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 14px;
+        &:hover {
+          cursor: pointer;
+          text-decoration: underline;
+        }
+      }
+      > span {
+        font-size: 11px;
+        line-height: 14px;
+      }
+    }
+  }
+  > .right {
+    display: flex;
+    > i {
+      margin-left: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background-color: rgba($color: #000000, $alpha: 0.05);
+      transition: all 0.1s linear;
+      &:hover {
+        cursor: pointer;
+        background-color: rgba($color: #000000, $alpha: 0.1);
+      }
+    }
+    > i:nth-child(2) {
+      > .video {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        background-color: rgba($color: #000000, $alpha: 0.3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        > .modalVideo {
+          padding: 10px 20px;
+          background-color: white;
+          border-radius: 10px;
+          display: flex;
+          flex-direction: column;
+          animation: scale 0.1s linear;
+          @keyframes scale {
+            from {
+              transform: scale(0.5);
+            }
+          }
+          > p {
+            font-size: 16px;
+            font-weight: 500;
+            text-align: center;
+            margin-bottom: 16px;
+            color: black;
+          }
+          > video {
+            width: 60vw;
+          }
+          > .containerBtnSubmit {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 16px;
+            > button {
+              height: 32px;
+              padding: 0 18px;
+              border-width: 0;
+              border-radius: 5px;
+              color: white;
+              transition: all 0.1s linear;
+              &:hover {
+                cursor: pointer;
+                opacity: 0.8;
+              }
+            }
+            > button:nth-child(1) {
+              background-color: #6c757d;
+            }
+          }
+        }
+      }
+    }
+  }
+}

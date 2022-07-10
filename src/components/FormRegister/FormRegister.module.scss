@@ -1,0 +1,92 @@
+.FormRegister {
+  > input {
+    background-color: rgba(0, 0, 0, 0.04);
+    border: 1px solid transparent;
+    border-radius: 10px;
+    font-size: 16px;
+    height: 36px;
+    margin-bottom: 12px;
+    padding: 0 16px;
+    transition: all 0.1s linear;
+    width: 320px;
+    &:focus {
+      border-color: var(--main-color);
+    }
+  }
+  > .containerInput {
+    position: relative;
+    > input {
+      background-color: rgba(0, 0, 0, 0.04);
+      border: 1px solid transparent;
+      border-radius: 10px;
+      font-size: 16px;
+      height: 36px;
+      margin-bottom: 12px;
+      padding: 0 16px;
+      transition: all 0.1s linear;
+      width: 320px;
+      &:focus {
+        border-color: var(--main-color);
+      }
+    }
+    > i {
+      align-items: center;
+      border-radius: 50%;
+      display: flex;
+      font-size: 20px;
+      height: 36px;
+      justify-content: center;
+      left: 280px;
+      position: absolute;
+      top: 0;
+      transition: all 0.1s linear;
+      width: 36px;
+      &:hover {
+        cursor: pointer;
+        opacity: 0.8;
+      }
+    }
+  }
+  > .announce {
+    align-items: center;
+    display: flex;
+    > i {
+      margin-right: 6px;
+    }
+    > span {
+      font-size: 13px;
+      font-weight: 500;
+    }
+  }
+  > .containerBtnSubmit {
+    align-items: center;
+    display: flex;
+    margin-top: 30px;
+    > button {
+      background-color: var(--main-color);
+      border-radius: 24px;
+      border-width: 0;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 500;
+      height: 44px;
+      margin-right: 20px;
+      padding: 0 20px;
+      transition: all 0.2s linear;
+      &:hover {
+        background-color: #4d4dff;
+        cursor: pointer;
+      }
+    }
+    > a {
+      color: var(--main-color);
+      font-size: 13px;
+      font-weight: 500;
+      text-decoration: underline;
+      transition: all 0.1s linear;
+      &:hover {
+        text-shadow: 0 0 12px;
+      }
+    }
+  }
+}

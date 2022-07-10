@@ -1,0 +1,89 @@
+.FooterChat {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+  position: relative;
+  > p {
+    position: absolute;
+    top: -4px;
+    left: calc(50% - 16px);
+    font-size: 12px;
+  }
+  > i {
+    margin: 0 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    transition: all 0.1s linear;
+    &:hover {
+      cursor: pointer;
+      background-color: rgba($color: #000000, $alpha: 0.1);
+    }
+  }
+  > i:nth-child(2) {
+    > input {
+      display: none;
+    }
+  }
+  > i:last-child {
+    font-size: 22px;
+  }
+  > .containerInput {
+    position: relative;
+    flex: 1;
+    > input {
+      width: 100%;
+      height: 36px;
+      border-radius: 18px;
+      border-width: 0;
+      background-color: rgba($color: #000000, $alpha: 0.04);
+      padding: 0 36px 0 14px;
+      font-size: 15px;
+    }
+    > i {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      top: 3px;
+      right: 4px;
+      transition: all 0.1s linear;
+      &:hover {
+        cursor: pointer;
+        background-color: rgba($color: #000000, $alpha: 0.1);
+      }
+    }
+    > ul {
+      position: absolute;
+      width: 400px;
+      height: 460px;
+      display: flex;
+      flex-wrap: wrap;
+      bottom: 36px;
+      right: 0;
+      background-color: white;
+      box-shadow: 0 0 12px rgba($color: #000000, $alpha: 0.3);
+      border-radius: 8px;
+      padding: 6px;
+      > li {
+        font-size: 36px;
+        height: 40px;
+        margin: 0 6px;
+        transition: all 0.05s linear;
+        &:hover {
+          cursor: pointer;
+          text-shadow: 0 0 6px rgba($color: #000000, $alpha: 0.5);
+        }
+      }
+    }
+  }
+}
