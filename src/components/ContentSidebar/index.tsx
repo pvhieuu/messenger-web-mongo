@@ -193,9 +193,7 @@ function ContentSidebar() {
         dispatch(sliceContentSidebar.actions.moveToTop(data.chat_id))
       data.chat_id === chatInfo?._id &&
         dispatch(updateReadedThunk({ chat_id: data.chat_id }))
-      new Audio(
-        'http://freesoundeffect.net/sites/default/files/social-media-alert-sound-effect-65341187.mp3'
-      ).play()
+      new Audio(require('../../assets/sound/sound.mp3')).play()
     })
 
     return () => {
@@ -246,7 +244,9 @@ function ContentSidebar() {
     )
 
     return () => {
-      socket.removeListener(`listen update guest_chat_id of user: ${myInfo._id}`)
+      socket.removeListener(
+        `listen update guest_chat_id of user: ${myInfo._id}`
+      )
     }
   }, [dispatch, myInfo._id])
 
@@ -333,7 +333,9 @@ function ContentSidebar() {
     })
 
     return () => {
-      socket.removeListener(`listen change chat nickname of user: ${myInfo._id}`)
+      socket.removeListener(
+        `listen change chat nickname of user: ${myInfo._id}`
+      )
     }
   }, [dispatch, myInfo, chatInfo])
 
