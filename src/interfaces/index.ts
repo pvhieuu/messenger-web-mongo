@@ -47,7 +47,7 @@ export interface IChat {
           content: string
           type: TYPE_MESSAGE
           sender_id: string
-          created_at: Date
+          createdAt: Date
         }
       ]
     | []
@@ -55,9 +55,8 @@ export interface IChat {
   color: string
   background_color: string
   emoji: string
-  created_at: Date
-  updated_at: Date
-  deleted_at: Date | null
+  createdAt: Date
+  updatedAt: Date
 }
 
 export enum TYPE_MESSAGE {
@@ -78,9 +77,8 @@ export interface IMessage {
   chat_id: string
   guest_message_id: string | null
   emoji: string | null
-  created_at: Date
-  updated_at: Date
-  deleted_at: Date | null
+  createdAt: Date
+  updatedAt: Date
 }
 
 export interface ICreateMessageDto {

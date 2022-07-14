@@ -372,7 +372,7 @@ function ContentSidebar() {
                     <span>{`${
                       lastMessage.sender_id === myInfo._id ? 'You: ' : ''
                     }${formatContentMessage(lastMessage.content)}`}</span>
-                    <span>{`- ${moment(lastMessage.created_at)
+                    <span>{`- ${moment(lastMessage.createdAt)
                       .fromNow()
                       .replace(' ago', '')
                       .replace('a few', '')}`}</span>
